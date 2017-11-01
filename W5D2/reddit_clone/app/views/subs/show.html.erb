@@ -1,0 +1,29 @@
+<%= link_to "All Subs", subs_url %>
+<h2><%= @sub.title %></h2>
+By: <%= @sub.moderator.username %>
+<br>
+<% if @sub.moderator == current_user %>
+  <%= link_to "Edit", edit_sub_url(@sub) %>
+  <%= button_to "Delete", sub_url(@sub), method: :delete %>
+<% end %>
+<br>
+<label>
+  Description:
+  <%= @sub.description %>
+</label>
+
+<h3>Posts</h3>
+<%= link_to "Create Post", new_post_url %>
+<br>
+<% @sub.posts.each do |post| %>
+  <%= post.title %>
+  <%= post.url %>
+  <%= post.content %>
+  <br>
+  By: <%= post.author.username %>
+  <% if post.author == current_user %>
+  <%= button_to "Delete", post_url(post), method: :delete %>
+  <% end %>
+  <br>
+  <br>
+<% end %>
