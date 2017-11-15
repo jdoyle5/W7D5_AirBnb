@@ -1,0 +1,25 @@
+
+
+#content {
+  display: flex;
+  justify-content: center;
+  background-color: #abcdef;
+  border: 1px solid #ddd;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+li {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+body {
+  background-color: #ccc
+}
